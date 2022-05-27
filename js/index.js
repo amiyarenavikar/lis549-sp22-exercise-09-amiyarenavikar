@@ -45,16 +45,19 @@ footerElement.html('<small>All images from <a href="https://unsplash.com/">unspl
 
 
 //Change the CSS `display` property of the `#cats` element
+$('#cats').css('display', 'none');
 //Add the `active` class to the `#btnShowDogs` element
-
-
+$('#btnShowDogs').addClass('active');
 
 
 //Add an event listener to the buttons to respond to click events.
+let button = $('.btn-group');
 //The listener's function will toggle the `#dogs` and `#cats` divs,
 //and toggle which button has the `active` class
-
-
+button.on('click', function(event) {
+    $('#cats, #dogs').toggle("fast");
+    $('#btnShowDogs, #btnShowCats').toggleClass('active');
+})
 
 
 //Change the `cursor` CSS property of the images
