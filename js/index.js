@@ -4,17 +4,30 @@ console.log("Script running!");
 
 
 //Define a variable `myName` and log it out
-
+let myName = "Amiya Renavikar";
+console.log(myName);
 
 
 
 //Define a function `getVowelCount()`
-
-
+function getVowelCount(aString) {
+    let lowerCaseString = aString.toLowerCase();
+    //console.log(lowerCaseString);
+    let modifiedString = lowerCaseString.replaceAll("a", "");
+    modifiedString = modifiedString.replaceAll("e", "");
+    modifiedString = modifiedString.replaceAll("i", "");
+    modifiedString = modifiedString.replaceAll("o", "");
+    modifiedString = modifiedString.replaceAll("u", "");
+    modifiedString = modifiedString.replaceAll("y", "");
+    //console.log(modifiedString);
+    let myString = lowerCaseString.length - modifiedString.length;
+    return myString;
+}
 
 
 //Define a variable `numVowelsInName` and log it out
-
+let numVowelsInName = getVowelCount(myName);
+console.log(numVowelsInName);
 
 
 
