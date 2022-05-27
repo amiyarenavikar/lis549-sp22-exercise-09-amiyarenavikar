@@ -40,8 +40,8 @@ h1Element.text("Interactive Pet Viewer");
 
 //Create a variable `footerElement` that refers to the `<footer>`, then
 //change the HTML content of that element
-
-
+let footerElement = $('footer');
+footerElement.html('<small>All images from <a href="https://unsplash.com/">unsplash.com</a></small>');
 
 
 //Change the CSS `display` property of the `#cats` element
