@@ -68,6 +68,14 @@ $('img').css({'cursor': 'pointer'});
 $('img').attr('data-bs-toggle', 'modal');
 $('img').attr('data-bs-target', '#niceModal');
 
-//Ad an event listener to the modal for `show.bs.modal` events.
+//Add an event listener to the modal for `show.bs.modal` events.
+let modal = $('show.bs.modal');
 //The listener's function will replace the modal's image `src` and
 //`alt` attributes with the values from the clicked image.
+modal.on('select', function(event){
+    let imageClicked = $(event.relatedTarget);
+    let srcV = imageClicked.attr('src');
+    let altV = imageClicked.attr('alt');
+    srcV = modal.src;
+    altV = modal.alt;
+});
