@@ -65,7 +65,8 @@ $('img').css({'cursor': 'pointer'});
 
 
 //Add the `data-bs-toggle` and `data-bs-target` attributes to the images
-
+$('img').attr('data-bs-toggle', 'modal');
+$('img').attr('data-bs-target', '#niceModal');
 
 //Ad an event listener to the modal for `show.bs.modal` events.
 //The listener's function will replace the modal's image `src` and
