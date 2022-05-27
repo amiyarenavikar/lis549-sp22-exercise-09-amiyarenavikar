@@ -61,8 +61,7 @@ button.on('click', function(event) {
 
 
 //Change the `cursor` CSS property of the images
-
-
+$('img').css({'cursor': 'pointer'});
 
 
 //Add the `data-bs-toggle` and `data-bs-target` attributes to the images
